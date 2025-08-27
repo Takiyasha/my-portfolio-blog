@@ -1,11 +1,12 @@
-import type { PropsWithChildren } from "react";
+import { ReactNode } from "react";
 
-type Props = PropsWithChildren<{ className?: string }>;
+interface ContainerProps {
+  children: ReactNode;
+}
 
-export default function Container({ children, className = "" }: Props) {
-  // 1440px canvas centered, with side padding
+export default function Container({ children }: ContainerProps) {
   return (
-    <div className={`mx-auto w-full max-w-[1440px] px-6 md:px-10 ${className}`}>
+    <div className="max-w-7xl mx-auto px-8 grid grid-cols-12 gap-4">
       {children}
     </div>
   );

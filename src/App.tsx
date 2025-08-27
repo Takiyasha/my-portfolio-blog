@@ -1,17 +1,13 @@
 // src/App.tsx
+import Navbar from "./components/Navbar";
 import { Outlet } from "react-router-dom";
-import { Helmet } from "react-helmet-async";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#ccced2]">
-      <Helmet>
-        <title>Ascanode</title>
-        <meta name="description" content="Ascanode — design & minimalism." />
-      </Helmet>
-
-      <main className="mx-auto max-w-[1440px] px-6">
-        <Outlet /> this is where the child routes will render
+    <div className="bg-[#ccced2] min-h-screen">
+      <Navbar />
+      <main className="pt-16">
+        <Outlet />
       </main>
     </div>
   );
