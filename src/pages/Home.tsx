@@ -1,7 +1,12 @@
+import Container from "../components/Container";
+
 export default function Home() {
   return (
-    <section className="min-h-[60vh] flex items-center justify-center">
-      <div className="w-64 h-64 bg-white shadow-lg" />
+    <section className="py-12">
+      <Container>
+        <div className="mx-auto h-[900px] bg-white" />
+        {/* ↑ adjust the height to match your grid (e.g., h-[880px], h-[920px], etc.) */}
+      </Container>
     </section>
   );
 }
