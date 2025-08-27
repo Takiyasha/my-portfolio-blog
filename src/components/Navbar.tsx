@@ -1,28 +1,29 @@
+// src/components/ui/Navbar.tsx
+import { Link, NavLink } from "react-router-dom";
 import Container from "./Container";
 
-export default function Navbar() {
+const link = "text-white/90 hover:text-white transition-colors";
+
+export default function Navbar(): JSX.Element {
   return (
     <header className="bg-[#ccced2] sticky top-0 z-50">
       <Container>
-        {/* Logo */}
-        <a
-          href="/"
-          className="col-span-6 text-white font-extrabold tracking-wide text-2xl flex items-center"
-        >
-          ASCANODE
-        </a>
+        <div className="col-span-6 flex items-center py-10">
+          <Link to="/" className="text-white font-bold text-2xl tracking-wide">
+            ASCANODE
+          </Link>
+        </div>
 
-        {/* Links */}
-        <nav className="col-span-6 flex justify-end gap-12 text-lg font-medium text-white items-center py-8">
-          <a href="#projects" className="hover:opacity-80">
+        <nav className="col-span-6 flex items-center justify-end gap-10 py-10">
+          <NavLink to="/projects" className={link}>
             Projects
-          </a>
-          <a href="#about" className="hover:opacity-80">
+          </NavLink>
+          <NavLink to="/about" className={link}>
             About
-          </a>
-          <a href="#contact" className="hover:opacity-80">
+          </NavLink>
+          <NavLink to="/contact" className={link}>
             Contact
-          </a>
+          </NavLink>
         </nav>
       </Container>
     </header>

@@ -1,12 +1,9 @@
+// src/components/Container.tsx
 import { ReactNode } from "react";
 
-interface ContainerProps {
-  children: ReactNode;
-}
-
-export default function Container({ children }: ContainerProps) {
+export default function Container({ children }: { children: ReactNode }) {
   return (
-    <div className="max-w-7xl mx-auto px-8 grid grid-cols-12 gap-4">
+    <div className="mx-auto max-w-[1440px] px-6 md:px-10 grid grid-cols-12 gap-4">
       {children}
     </div>
   );
