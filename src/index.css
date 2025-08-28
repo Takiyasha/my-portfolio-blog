@@ -4,8 +4,9 @@ html,
 body,
 #root {
   height: 100%;
-  margin: 0;
-  padding: 0;
+}
+body {
+  @apply bg-black text-white;
 }
 
 /* Declare design tokens (v4 way) */
